@@ -1,12 +1,14 @@
 //koneksi ke pg dengan npm pg dan dokumentasi di node pg
 const { Client } = require('pg');
+//menambahkan .env
+require('dotenv').config();
 
 const db = new Client({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'getpay',
-  password: '0227814081',
-  port: 5432,
+  user: process.env.USER,
+  host: process.env.HOST,
+  database: process.env.DATABASE,
+  password: process.env.PASSWORD,
+  port: process.env.PORT,
 });
 
 //client conect ngambil dari const client = new client dan cek koneksi db
