@@ -4,6 +4,7 @@ const router = express();
 //import route
 const transactionRoute = require('./transaction.route');
 const userRoute = require('./user.route.js');
+const authRoute = require('./auth.route.js');
 
 //endpoint home
 router.get('/', (req, res) => {
@@ -13,5 +14,6 @@ router.get('/', (req, res) => {
 //using route
 router.use('/transactions', transactionRoute);
 router.use('/users', userRoute);
+router.use('/auth', authRoute);
 
 module.exports = router;
