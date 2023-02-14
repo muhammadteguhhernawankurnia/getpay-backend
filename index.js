@@ -4,6 +4,10 @@ const app = express();
 //manggil db koneksi
 const db = require('./src/helper/connection');
 
+//add cors
+const cors = require('cors');
+app.use(cors());
+
 //add router
 const router = require('./src/route/index');
 
